@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState("")
 
   const signup = () => {
-    fetch("http://localhost:3001/api/signup", {
+    fetch("https://jwt-backend-txyr.onrender.com/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -18,7 +18,7 @@ function App() {
   }
 
   const login = () => {
-    fetch("http://localhost:3001/api/login", {
+    fetch("https://jwt-backend-txyr.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -33,7 +33,7 @@ function App() {
   }
 
   const getProtected = () => {
-    fetch("http://localhost:3001/api/protected", {
+    fetch("https://jwt-backend-txyr.onrender.com/api/protected", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token")
       }
